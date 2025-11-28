@@ -26,6 +26,6 @@ def send_email(subject, body, to_email):
         text = msg.as_string()
         server.sendmail(sender_email, to_email, text)
         server.quit()
-        print(f"Correo enviado a {to_email}")
+        print(f"Email sent to {to_email}")
     except Exception as e:
-        print(f"Error al enviar correo: {e}")
+        print(f"Error sending email: {e}")

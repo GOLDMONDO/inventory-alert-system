@@ -1,5 +1,6 @@
 import pandas as pd
 import random
+from pathlib import Path
 
 def generate_sample_data():
     products = [f"Producto_{i}" for i in range(1, 101)]
@@ -11,8 +12,9 @@ def generate_sample_data():
         "last_updated": pd.date_range(start="2024-01-01", periods=100, freq='D')
     }
     df = pd.DataFrame(data)
-    df.to_csv("C:/Users/Nico Aldazaba/PycharmProjects/RemoteJobGo/Github Project/inventory_alert_system/data/inventory.csv", index=False)
-    print("Archivo 'inventory.csv' generado exitosamente.")
+    file_path = Path("data") / "inventory.csv"
+    df.to_csv(file_path, index=False)
+    print("File 'inventory.csv' generated successfully.")
 
 if __name__ == "__main__":
     generate_sample_data()
