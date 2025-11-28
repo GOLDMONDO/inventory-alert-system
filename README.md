@@ -100,13 +100,12 @@ This project sends email alerts when inventory levels fall below the minimum thr
     ```
 
 ## Project Structure
-
+```
 inventory_alert_system/
-│
-├── data/ # Directory for inventory and log files
+├── data/
 │ ├── inventory.csv # Input file containing inventory data
 │ └── alerts_log.csv # Output file logging sent alerts
-├── src/ # Source code files
+├── src/
 │ ├── generate_data.py # Script to create sample inventory data
 │ ├── inventory_checker.py # Main logic for checking inventory levels
 │ ├── email_sender.py # Module for sending emails via SMTP
@@ -119,7 +118,7 @@ inventory_alert_system/
 ├── run.py # Main entry point to run the entire system
 ├── run_inventory_alert.bat # (Windows) Script for scheduled execution
 └── run_inventory_alert.sh # (Linux/macOS) Script for scheduled execution
-
+```
 
 ## Dependencies
 
